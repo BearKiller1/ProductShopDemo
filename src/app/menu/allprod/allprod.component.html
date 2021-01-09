@@ -1,0 +1,10 @@
+<p>allprod works!</p>
+<div class="" *ngFor="let item of info">
+  <div class="box">
+    User ID -{{ item.userId}}
+    <br>
+    ID - {{ item.id}}
+    <button type="button" [routerLink]="['../detail',
+    item.id,item.title,item.userId,item.body]">Detail!</button>
+  </div>
+</div>

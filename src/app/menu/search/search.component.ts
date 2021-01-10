@@ -15,10 +15,10 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.sub = this.route.paramMap.subscribe( (tmp:any) =>{
-      this.id = tmp;
+      this.id = tmp.get("id");
     });
 
-    this.Obj.getById(this.id['params']['id']).subscribe( (tmp:any) => {
+    this.Obj.getById(this.id).subscribe( (tmp:any) => {
       this.data = tmp[0];
       console.log(this.data);
     })

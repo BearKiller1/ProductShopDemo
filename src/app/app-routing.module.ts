@@ -8,6 +8,9 @@ import { AboutComponent } from './menu/about/about.component';
 import { DetailComponent } from './menu/detail/detail.component';
 import { AllprodComponent } from './menu/allprod/allprod.component';
 import { ErroComponent } from './menu/erro/erro.component';
+import { ErroparentComponent } from './erro/erro.component';
+import { SearchComponent } from './menu/search/search.component';
+import { FilterComponent } from './menu/filter/filter.component';
 
 const routes: Routes = [
   {
@@ -19,8 +22,7 @@ const routes: Routes = [
     component:ShopComponent,
     children:[
       {
-        path:"detail/:id/:title/:userId/:body",
-        // /:id/:title/:body
+        path:"detail/:id",
         component:DetailComponent,
       },
       {
@@ -28,9 +30,21 @@ const routes: Routes = [
         component:AllprodComponent,
       },
       {
+        path:"search/:id",
+        component:SearchComponent,
+      },
+      {
+        path:"filter/:min/:max",
+        component:FilterComponent,
+      },
+      {
         path:'',
         redirectTo:"all",
         pathMatch:"full",
+      },
+      {
+        path:"**",
+        component:ErroComponent,
       }
     ]
   },
@@ -41,6 +55,10 @@ const routes: Routes = [
   {
     path:"about",
     component:AboutComponent,
+  },
+  {
+    path:"**",
+    component:ErroparentComponent,
   }
 ];
 

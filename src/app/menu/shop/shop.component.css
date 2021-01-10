@@ -1,0 +1,38 @@
+.search input{
+  width: 80%;
+  height: 5vh;
+  border:1px solid black;
+  margin-left: 10%;
+}
+.sideMenu{
+  width: 15%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border:1px solid gray;
+}
+.filter input{
+  width: 30%;
+  margin-left: 9%;
+  margin-top: 2vh;
+}
+.price, .color, .category {
+  width: 90%;
+  height: 5vh;
+  margin-left: 2%;
+  margin-top: 2vh;
+  background: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.price img, .color img, .category img{
+  width: 30%;
+  height: 5vh;
+  cursor: pointer;
+}
+.categoryFilrer{
+  font-size: 1.4vw;
+}

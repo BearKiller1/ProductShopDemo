@@ -5,11 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './erro.component.html',
   styleUrls: ['./erro.component.css']
 })
-export class ErroComponent implements OnInit {
+export class ErroparentComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

@@ -9,9 +9,11 @@ import { AllprodComponent } from './allprod/allprod.component';
 import { ErroComponent } from './erro/erro.component';
 
 import { RouterModule } from "@angular/router";
+import { FilterComponent } from './filter/filter.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
-  declarations: [ShopComponent, HomeComponent, ContactComponent, AboutComponent, DetailComponent, AllprodComponent, ErroComponent],
+  declarations: [ShopComponent, HomeComponent, ContactComponent, AboutComponent, DetailComponent, AllprodComponent, ErroComponent, FilterComponent, SearchComponent],
   imports: [
     CommonModule,
     RouterModule

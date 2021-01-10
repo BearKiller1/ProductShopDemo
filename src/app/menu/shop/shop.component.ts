@@ -14,15 +14,30 @@ export class ShopComponent implements OnInit {
     private router:Router,
     private route:ActivatedRoute
   ) { }
-
+  filt = false;
   data:any;
-  filtId(id:any){
-    var number = id.target.value;
-    this.Obj.getBy(number).subscribe( (data:any) =>{
-      this.data = data[0];
-    });
-  }
+  first:any;
+  second:any;
 
+  min(x:any){
+    this.first = x.target.value;
+  }
+  max(x:any){
+    this.second = x.target.value;
+  }
+  minmaxfilt(){
+    this.router.navigate(
+      ["filter",this.first,this.second],
+      {relativeTo:this.route}
+    )
+  }
+  filtId(id:any){
+    this.data = id.target.value;
+    this.router.navigate(
+      ["search",this.data],
+      {relativeTo:this.route}
+    )
+  }
   ngOnInit(): void {
   }
 
